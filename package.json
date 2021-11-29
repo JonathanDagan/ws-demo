@@ -1,0 +1,29 @@
+{
+  "name": "ws-demo",
+  "version": "1.0.0",
+  "description": "",
+  "labels": [
+    "demo"
+  ],
+  "scripts": {
+    "start": "concurrently npm:start:*",
+    "start:ws-client": "yarn --cwd ./ws-client run start",
+    "start:server": "yarn --cwd ./server run start",
+    "install:ws-client": "yarn --cwd ./ws-client install",
+    "install:server": "yarn --cwd ./server install",
+    "postinstall": "concurrently npm:install:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanDagan/ws-demo.git"
+  },
+  "author": "Jonathan Dagan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JonathanDagan/ws-demo/issues"
+  },
+  "homepage": "https://github.com/JonathanDagan/ws-demo#readme",
+  "devDependencies": {
+    "concurrently": "^6.4.0"
+  }
+}
