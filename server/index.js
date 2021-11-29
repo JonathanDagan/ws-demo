@@ -1,3 +1,4 @@
+const serverPort = require("./config");
 
 const http = require('http').createServer();
 
@@ -14,23 +15,4 @@ io.on('connection', (socket) => {
     });
 });
 
-http.listen(8080, () => console.log('listening on http://localhost:8080') );
-
-
-// Regular Websockets
-
-// const WebSocket = require('ws')
-// const server = new WebSocket.Server({ port: '8080' })
-
-// server.on('connection', socket => { 
-
-//   socket.on('message', message => {
-
-//     socket.send(`Roger that! ${message}`);
-
-//   });
-
-// });
-
-
- 
+http.listen(8080, () => console.log(`listening on http://0.0.0.0:${serverPort}`) );

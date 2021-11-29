@@ -4,7 +4,7 @@ import { serverBaseUrl, serverPort } from "./config";
 
 export function Messages() {
     window.onload = function(){
-        const socket = io(`${serverBaseUrl}:${serverPort}`)
+        const socket = io(`ws://localhost:${8080}`)
         socket.on('message', text => {
     
             const el = document.createElement('li');
