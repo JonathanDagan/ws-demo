@@ -1,4 +1,4 @@
-const serverPort = require("./config");
+const port = process.env.PORT || 8888
 
 const http = require('http').createServer();
 
@@ -15,4 +15,4 @@ io.on('connection', (socket) => {
     });
 });
 
-http.listen(8080, () => console.log(`listening on http://0.0.0.0:${serverPort}`) );
+http.listen(port, () => console.log(`listening on http://localhost:${port}}`) );
